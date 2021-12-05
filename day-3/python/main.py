@@ -11,10 +11,6 @@ def get_input(day: int) -> list[str]:
         return fp.read().split()
 
 
-def bitwise_xor(a: int, b: int) -> int:
-    return a ^ b
-
-
 def get_power_rating(values: list[int], predicate: Callable[[int, int], bool]) -> int:
     threshold = len(values) // 2
     return reduce(int.__xor__, [
